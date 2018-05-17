@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Combats list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Resultat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for combat in combats %}
+            <tr>
+                <td><a href="{{ path('combat_show', { 'id': combat.id }) }}">{{ combat.id }}</a></td>
+                <td>{% if combat.date %}{{ combat.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ combat.resultat }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('combat_show', { 'id': combat.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('combat_edit', { 'id': combat.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('combat_new') }}">Create a new combat</a>
+        </li>
+    </ul>
+{% endblock %}

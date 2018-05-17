@@ -400,7 +400,7 @@ th {
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url(/web/fonts/glyphicons-halflings-regular.f4769f9b.eot);
-  src: url(/web/fonts/glyphicons-halflings-regular.f4769f9b.eot?#iefix) format("embedded-opentype"), url(/web/fonts/glyphicons-halflings-regular.448c34a5.woff2) format("woff2"), url(/web/fonts/glyphicons-halflings-regular.fa277232.woff) format("woff"), url(/web/fonts/glyphicons-halflings-regular.e18bbf61.ttf) format("truetype"), url(/web/images/glyphicons-halflings-regular.89889688.svg#glyphicons_halflingsregular) format("svg"); }
+  src: url(/web/fonts/glyphicons-halflings-regular.f4769f9b.eot?#iefix) format("embedded-opentype"), url(/web/fonts/glyphicons-halflings-regular.448c34a5.woff2) format("woff2"), url(/web/fonts/glyphicons-halflings-regular.fa277232.woff) format("woff"), url(/web/fonts/glyphicons-halflings-regular.e18bbf61.ttf) format("truetype"), url(/web/assets/images/glyphicons-halflings-regular.89889688.svg#glyphicons_halflingsregular) format("svg"); }
 
 .glyphicon {
   position: relative;
@@ -6383,7 +6383,7 @@ th {
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url(/web/fonts/glyphicons-halflings-regular.f4769f9b.eot);
-  src: url(/web/fonts/glyphicons-halflings-regular.f4769f9b.eot?#iefix) format("embedded-opentype"), url(/web/fonts/glyphicons-halflings-regular.448c34a5.woff2) format("woff2"), url(/web/fonts/glyphicons-halflings-regular.fa277232.woff) format("woff"), url(/web/fonts/glyphicons-halflings-regular.e18bbf61.ttf) format("truetype"), url(/web/images/glyphicons-halflings-regular.89889688.svg#glyphicons_halflingsregular) format("svg"); }
+  src: url(/web/fonts/glyphicons-halflings-regular.f4769f9b.eot?#iefix) format("embedded-opentype"), url(/web/fonts/glyphicons-halflings-regular.448c34a5.woff2) format("woff2"), url(/web/fonts/glyphicons-halflings-regular.fa277232.woff) format("woff"), url(/web/fonts/glyphicons-halflings-regular.e18bbf61.ttf) format("truetype"), url(/web/assets/images/glyphicons-halflings-regular.89889688.svg#glyphicons_halflingsregular) format("svg"); }
 
 .glyphicon {
   position: relative;

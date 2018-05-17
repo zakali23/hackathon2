@@ -5,12 +5,63 @@
     <title>{% block title %}Welcome!{% endblock %}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    <link rel="stylesheet" href="{{ asset('build/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
-{% block body %}{% endblock %}
-<script src="{{ asset('build/app.js') }}"></script>
+{% block body %}
+<header>
+    <nav class="navbar navbar-default navbar-doublerow navbar-trans navbar-fixed-top">
+        <!-- top nav -->
+        <nav class="navbar navbar-top hidden-xs">
+            <div class="container">
+                <!-- left nav top -->
+                <ul class="nav navbar-nav pull-left">
+                    <li><a href="#"><span class="text-white">QUESTIONS ? CALL: <b>+(33)6.30.00.00.00</b></span></a></li>
+                </ul>
+                <!-- right nav top -->
+                <ul class="nav navbar-nav pull-right">
+
+                    <li><a href="" class="text-white"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Admin</a></li>
+                </ul>
+            </div>
+            <div class="dividline light-grey"></div>
+        </nav>
+        <!-- down nav -->
+        <nav class="navbar navbar-down">
+            <div class="container">
+                <div class="flex-container">
+                    <div class="navbar-header flex-item">
+                        <div class="navbar-brand" href="">Battle nations</div>
+                    </div>
+                    <ul class="nav navbar-nav flex-item hidden-xs">
+                        <li><a href="{{ path('equipe_team')}}">TEAM</a></li>
+                        <li><a href="">FIGHT</a></li>
+                        <li><a href="">TOURNAMENT</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav flex-item hidden-xs pull-right">
+                        <li><a href="" class="">Header section!</a></li>
+                    </ul>
+                    <!-- dropdown only moblie -->
+                    <div class="dropdown visible-xs pull-right">
+                        <button class="btn btn-default dropdown-toggle " type="button" id="dropdownmenu" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-align-justify"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">TheTeam</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </nav>
+</header>
+{% endblock %}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 {% block javascripts %}{% endblock %}
 </body>
 </html>

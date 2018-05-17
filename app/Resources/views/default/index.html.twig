@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('build/Accueil.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Accueil.css') }}">
 {% endblock %}
 {% block body %}
     <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
@@ -36,7 +36,7 @@
                         <div class="navbar-brand" href="">Battle nations</div>
                     </div>
                     <ul class="nav navbar-nav flex-item hidden-xs">
-                        <li><a href="">TEAM</a></li>
+                        <li><a href="{{ path('equipe_team')}}">TEAM</a></li>
                         <li><a href="">FIGHT</a></li>
                         <li><a href="">TOURNAMENT</a></li>
                     </ul>
@@ -61,10 +61,11 @@
         </nav>
     </nav>
     <!--bg img  -->
-    <header>
+
         <div class="logo">
             <img src="/images/logo.png" alt="logo">
             <h1>Battle Nations</h1>
         </div>
+
 
 {% endblock %}

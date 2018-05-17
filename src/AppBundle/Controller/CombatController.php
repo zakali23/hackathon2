@@ -31,6 +31,7 @@ class CombatController extends Controller
         ));
     }
 
+
     /**
      * Creates a new combat entity.
      *

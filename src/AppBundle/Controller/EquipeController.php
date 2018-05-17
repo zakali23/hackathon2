@@ -17,7 +17,23 @@ class EquipeController extends Controller
     /**
      * Lists all equipe entities.
      *
-     * @Route("/", name="equipe_index")
+     * @Route("/", name="equipe_team")
+     * @Method("GET")
+     */
+    public function equipeAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $equipes = $em->getRepository('AppBundle:Equipe')->findAll();
+
+        return $this->render('equipe/equipe.html.twig', array(
+            'equipes' => $equipes,
+        ));
+    }
+    /**
+     * Lists all equipe entities.
+     *
+     * @Route("/admin", name="equipe_index")
      * @Method("GET")
      */
     public function indexAction()

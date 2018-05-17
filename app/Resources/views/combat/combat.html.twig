@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/combat.css') }}">
+{% endblock %}
+{% block body %}
+    <div class="container-combat">
+
+        <div class="round completed">
+            <div class="bracket">
+                <div class="player winner">
+                    <p class="name">{{ combats.0.equipe1 }}</p>
+                    <p class="name">{{ combats.0.date|date('Y-m-d H:i:s') }}</p>
+                    <p class="score">11</p>
+
+                </div>
+
+                <div class="player loser">
+                    <p class="name">{{ combats.0.equipe2 }}</p>
+                    <p class="name">{{ combats.0.date|date('Y-m-d H:i:s') }}</p>
+                    <p class="score">7</p>
+                </div>
+            </div>
+            <div class="bracket">
+                <div class="player">
+                    <p class="name">{{ combats.1.equipe1 }}</p>
+                    <p class="name">{{ combats.1.date|date('Y-m-d H:i:s') }}</p>
+                    <p class="score">18</p>
+                </div>
+
+                <div class="player loser">
+                    <p class="name">{{ combats.1.equipe2 }}</p>
+                    <p class="name">{{ combats.1.date|date('Y-m-d H:i:s') }}</p>
+                    <p class="score">2</p>
+                </div>
+            </div>
+            <div class="bracket">
+                <div class="player">
+                    <p class="name">{{ combats.2.equipe1 }}</p>
+                    <p class="name">{{ combats.2.date|date('Y-m-d H:i:s') }}</p>
+                    <p class="score">18</p>
+                </div>
+
+                <div class="player loser">
+                    <p class="name">{{ combats.2.equipe2 }}</p>
+                    <p class="name">{{ combats.2.date|date('Y-m-d H:i:s') }}</p>
+                    <p class="score">2</p>
+                </div>
+            </div>
+            <div class="bracket">
+                <div class="player">
+                    <p class="name">{{ combats.3.equipe1 }}</p>
+                    <p class="name">{{ combats.3.date|date('Y-m-d H:i:s') }}</p>
+                    <p class="score">18</p>
+                </div>
+
+                <div class="player loser">
+                    <p class="name">{{ combats.3.equipe2 }}</p>
+                    <p class="name">{{ combats.3.date|date('Y-m-d H:i:s') }}</p>
+                    <p class="score">2</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="round">
+            <div class="bracket">
+                <div class="player">
+                    <p class="name">{{ combats.0.resultat }}</p>
+                </div>
+                <div class="player">
+                    <p class="name">{{ combats.1.resultat }}</p>
+                </div>
+            </div>
+            <div class="bracket">
+                <div class="player">
+                    <p class="name">{{ combats.2.resultat }}</p>
+                </div>
+                <div class="player">
+                    <p class="name">{{ combats.3.resultat }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="round">
+            <div class="bracket">
+                <div class="player"></div>
+                <div class="player"></div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

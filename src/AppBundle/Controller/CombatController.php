@@ -10,23 +10,43 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component
 /**
  * Combat controller.
  *
- * @Route("combat")
+ * @Route("tournament")
  */
 class CombatController extends Controller
 {
+
     /**
      * Lists all combat entities.
      *
-     * @Route("/", name="combat_index")
+     * @Route("/fight", name="combat_fight")
      * @Method("GET")
      */
-    public function indexAction()
+    public function fightAction()
     {
         $em = $this->getDoctrine()->getManager();
 
         $combats = $em->getRepository('AppBundle:Combat')->findAll();
 
-        return $this->render('combat/index.html.twig', array(
+        return $this->render('combat/fight.html.twig', array(
+            'combats' => $combats,
+        ));
+    }
+
+
+    /**
+     * Lists all combat entities.
+     *
+
+     * @Route("/", name="combat_tournoi")
+
+     * @Method("GET")
+     */
+    public function tournoiAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $combats = $em->getRepository('AppBundle:Combat')->findAll();
+        return $this->render('combat/combat.html.twig', array(
             'combats' => $combats,
         ));
     }
@@ -133,5 +153,22 @@ class CombatController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    /**
+     * Lists all combat entities.
+     *
+     * @Route("/admin", name="combat_index")
+     * @Method("GET")
+     */
+    public function indexAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $combats = $em->getRepository('AppBundle:Combat')->findAll();
+
+        return $this->render('combat/index.html.twig', array(
+            'combats' => $combats,
+        ));
     }
 }

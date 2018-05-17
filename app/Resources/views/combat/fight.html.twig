@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    {% for entity in combats %}
+        <ul>
+            <li>Equipe 1 : {{ entity.equipe1 }}</li>
+            <li>Equipe 2 : {{ entity.equipe2 }}</li>
+            <li>Date : {{ entity.date|date('Y-m-d H:i:s') }}</li>
+            <li>Vainqueur : {{ entity.resultat }}</li>
+        </ul>
+
+    {% endfor %}
+
+{% endblock %}

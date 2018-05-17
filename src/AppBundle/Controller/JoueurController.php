@@ -17,7 +17,24 @@ class JoueurController extends Controller
     /**
      * Lists all joueur entities.
      *
-     * @Route("/", name="joueur_index")
+     * @Route("/", name="joueur_team")
+     * @Method("GET")
+     */
+    public function joueurAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $joueurs = $em->getRepository('AppBundle:Joueur')->findAll();
+
+        return $this->render('joueur/joueur.html.twig', array(
+            'joueurs' => $joueurs,
+        ));
+    }
+
+    /**
+     * Lists all joueur entities.
+     *
+     * @Route("/admin", name="joueur_index")
      * @Method("GET")
      */
     public function indexAction()

@@ -10,6 +10,9 @@
                 <th>Date</th>
                 <th>Resultat</th>
                 <th>Actions</th>
+                <th>Equipe 1</th>
+                <th>Equipe 2</th>
+
             </tr>
         </thead>
         <tbody>
@@ -18,6 +21,10 @@
                 <td><a href="{{ path('combat_show', { 'id': combat.id }) }}">{{ combat.id }}</a></td>
                 <td>{% if combat.date %}{{ combat.date|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ combat.resultat }}</td>
+                <td>{{ combat.equipe1.nomEquipe }}</td>
+                <td>{{ combat.equipe2.nomEquipe }}</td>
+
+
                 <td>
                     <ul>
                         <li>

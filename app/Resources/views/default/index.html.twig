@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="{{ asset('build/Accueil.css') }}">
 {% endblock %}
 {% block body %}
-    <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+    <video poster="" id="bgvid" playsinline autoplay muted loop>
         <!--
       - Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
       WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
@@ -12,58 +12,11 @@
 
     </video>
 
-    <nav class="navbar navbar-default navbar-doublerow navbar-trans navbar-fixed-top">
-        <!-- top nav -->
-        <nav class="navbar navbar-top hidden-xs">
-            <div class="container">
-                <!-- left nav top -->
-                <ul class="nav navbar-nav pull-left">
-                    <li><a href="#"><span class="text-white">QUESTIONS ? CALL: <b>+(33)6.30.00.00.00</b></span></a></li>
-                </ul>
-                <!-- right nav top -->
-                <ul class="nav navbar-nav pull-right">
 
-                    <li><a href="" class="text-white"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Admin</a></li>
-                </ul>
-            </div>
-            <div class="dividline light-grey"></div>
-        </nav>
-        <!-- down nav -->
-        <nav class="navbar navbar-down">
-            <div class="container">
-                <div class="flex-container">
-                    <div class="navbar-header flex-item">
-                        <div class="navbar-brand" href="">Battle nations</div>
-                    </div>
-                    <ul class="nav navbar-nav flex-item hidden-xs">
-                        <li><a href="">TEAM</a></li>
-                        <li><a href="">FIGHT</a></li>
-                        <li><a href="">TOURNAMENT</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav flex-item hidden-xs pull-right">
-                        <li><a href="" class="">Header section!</a></li>
-                    </ul>
-                    <!-- dropdown only moblie -->
-                    <div class="dropdown visible-xs pull-right">
-                        <button class="btn btn-default dropdown-toggle " type="button" id="dropdownmenu" data-toggle="dropdown">
-                            <span class="glyphicon glyphicon-align-justify"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">TheTeam</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">contact us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </nav>
     <!--bg img  -->
     <header>
         <div class="logo">
-            <img src="/images/logo.png" alt="logo">
+            <img src="assets/images/logo.png" alt="logo">
             <h1>Battle Nations</h1>
         </div>
 

@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
+{% block header %}
+{% endblock %}
 {% block body %}
-    <h1>Combats list</h1>
-
-    <table>
+    <h1 style="text-align: center">Combats list</h1>
+    <a href="{{ path('user_new') }}" style="text-align: center">Back to the admin page</a>
+    <table class="table">
         <thead>
-            <tr>
+            <tr class="myHead">
                 <th>Id</th>
                 <th>Date</th>
                 <th>Resultat</th>
@@ -28,7 +30,7 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('combat_show', { 'id': combat.id }) }}">show</a>
+                            <a href="{{ path('combat_show', { 'id': combat.id }) }}" class="btn btn-info playBtn">show</a>
                         </li>
                         <li>
                             <a href="{{ path('combat_edit', { 'id': combat.id }) }}">edit</a>

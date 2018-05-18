@@ -1,9 +1,13 @@
-{% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% endblock %}
+{% block header %}
+{% endblock %}
 {% block body %}
-    <h1>Equipes list</h1>
-
-    <table>
+    <h1 style="text-align: center">Equipes list</h1>
+    <a href="{{ path('user_new') }}" style="text-align: center">Back to the admin page</a>
+    <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
@@ -17,17 +21,12 @@
             <tr>
                 <td><a href="{{ path('equipe_show', { 'id': equipe.id }) }}">{{ equipe.id }}</a></td>
                 <td>{{ equipe.nomEquipe }}</td>
-                <td>{{ equipe.drapeau }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('equipe_show', { 'id': equipe.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('equipe_edit', { 'id': equipe.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
+                    <img src="{{ equipe.drapeau }}" alt="drapeau"></td>
+                        <td>
+                            <a href="{{ path('equipe_edit', { 'id': equipe.id }) }}" class="btn btn-info playBtn">edit</a>
+                        </td>
+
             </tr>
         {% endfor %}
         </tbody>

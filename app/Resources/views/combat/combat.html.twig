@@ -8,27 +8,27 @@
 
         <div class="round completed">
             <div class="bracket">
-                <div class="player winner">
+                <div class="player loser">
                     <h4 class="name">{{ combats.0.equipe1 }}</h4>
                     <p class="name">{{ combats.0.date|date('Y-m-d H:i') }}</p>
                     <p class="score">11</p>
 
                 </div>
 
-                <div class="player loser">
+                <div class="player winner">
                     <h4 class="name">{{ combats.0.equipe2 }}</h4>
                     <p class="name">{{ combats.0.date|date('Y-m-d H:i') }}</p>
                     <p class="score">7</p>
                 </div>
             </div>
             <div class="bracket">
-                <div class="player loser">
+                <div class="player winner">
                     <h4 class="name">{{ combats.1.equipe1 }}</h4>
                     <p class="name">{{ combats.1.date|date('Y-m-d H:i') }}</p>
                     <p class="score">10</p>
                 </div>
 
-                <div class="player winner">
+                <div class="player loser">
                     <h4 class="name">{{ combats.1.equipe2 }}</h4>
                     <p class="name">{{ combats.1.date|date('Y-m-d H:i') }}</p>
                     <p class="score">19</p>
@@ -66,22 +66,22 @@
         <div class="round">
             <div class="bracket">
                 <div class="player">
-                    <h4 class="name">{{ combats.8.resultat }}</h4>
-                    <p class="name">{{ combats.8.date|date('Y-m-d H:i') }}</p>
+                    <h4 class="name">{{ combats.0.resultat }}</h4>
+                    <p class="name">{{ combats.6.date|date('Y-m-d H:i') }}</p>
                 </div>
                 <div class="player">
-                    <h4 class="name">{{ combats.9.resultat }}</h4>
-                    <p class="name">{{ combats.9.date|date('Y-m-d H:i') }}</p>
+                    <h4 class="name">{{ combats.1.resultat }}</h4>
+                    <p class="name">{{ combats.6.date|date('Y-m-d H:i') }}</p>
                 </div>
             </div>
             <div class="bracket">
                 <div class="player">
-                    <h4 class="name">{{ combats.10.resultat }}</h4>
-                    <p class="name">{{ combats.10.date|date('Y-m-d H:i') }}</p>
+                    <h4 class="name">{{ combats.2.resultat }}</h4>
+                    <p class="name">{{ combats.7.date|date('Y-m-d H:i') }}</p>
                 </div>
                 <div class="player">
-                    <h4 class="name">{{ combats.11.resultat }}</h4>
-                    <p class="name">{{ combats.11.date|date('Y-m-d H:i') }}</p>
+                    <h4 class="name">{{ combats.3.resultat }}</h4>
+                    <p class="name">{{ combats.7.date|date('Y-m-d H:i') }}</p>
                 </div>
             </div>
         </div>

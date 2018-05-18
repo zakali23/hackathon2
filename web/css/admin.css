@@ -28,4 +28,21 @@ button[type=submit]:hover > i{
 button[type=submit] > i {
     color: #fff;
 }
+.col-md-6.mx-auto {
+    color: #fff;
+    font-size: 19px;
+}
+#uname1 {
 
+    background: transparent;
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+
+}
+.form-control.form-control-lg.rounded-0 {
+    background: transparent;
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+}

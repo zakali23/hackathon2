@@ -80,7 +80,7 @@ INSERT INTO `equipe` (`id`, `drapeau`, `nomEquipe`) VALUES
 (13, '/assets/images/drapeaux/fatimides.jpg', 'Fatimides'),
 (14, '/assets/images/drapeaux/egyptiens.png', 'Egyptiens'),
 (15, '/assets/images/drapeaux/ottoman.png', 'Ottoman'),
-(16, '/assets/images/drapeaux/chevalier_bar.jpg', 'Chevalier de la table du bar');
+(16, '/assets/images/drapeaux/chevalier_bar.jpg', 'Chevaliers de la table du bar');
 
 -- --------------------------------------------------------
 

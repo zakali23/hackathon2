@@ -26,6 +26,13 @@ class Equipe
     /**
      * @var int
      *
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Joueur", mappedBy="idEquipe")
+     */
+    private $idEquipes;
+
+    /**
+     * @var int
+     *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -102,5 +109,48 @@ class Equipe
     public function getDrapeau()
     {
         return $this->drapeau;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idEquipes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add idEquipe.
+     *
+     * @param \AppBundle\Entity\Joueur $idEquipe
+     *
+     * @return Equipe
+     */
+    public function addIdEquipe(\AppBundle\Entity\Joueur $idEquipe)
+    {
+        $this->idEquipes[] = $idEquipe;
+
+        return $this;
+    }
+
+    /**
+     * Remove idEquipe.
+     *
+     * @param \AppBundle\Entity\Joueur $idEquipe
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeIdEquipe(\AppBundle\Entity\Joueur $idEquipe)
+    {
+        return $this->idEquipes->removeElement($idEquipe);
+    }
+
+    /**
+     * Get idEquipes.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getIdEquipes()
+    {
+        return $this->idEquipes;
     }
 }

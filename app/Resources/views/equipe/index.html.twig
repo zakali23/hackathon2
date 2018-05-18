@@ -7,7 +7,7 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Nom equipe</th>
+                <th>Nomequipe</th>
                 <th>Drapeau</th>
                 <th>Actions</th>
             </tr>
@@ -18,8 +18,7 @@
                 <td><a href="{{ path('equipe_show', { 'id': equipe.id }) }}">{{ equipe.id }}</a></td>
                 <td>{{ equipe.nomEquipe }}</td>
                 <td>{{ equipe.drapeau }}</td>
-
-
+                <td>
                     <ul>
                         <li>
                             <a href="{{ path('equipe_show', { 'id': equipe.id }) }}">show</a>

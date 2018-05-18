@@ -30,6 +30,7 @@ class EquipeController extends Controller
             'equipes' => $equipes,
         ));
     }
+
     /**
      * Lists all equipe entities.
      *

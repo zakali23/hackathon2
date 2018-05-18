@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Joueur
 {
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Equipe")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Equipe", inversedBy="idEquipes")
      * @ORM\JoinColumn(nullable=false)
      */
     private $idEquipe;

@@ -1,8 +1,26 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/equipe.css') }}">
+{% endblock %}
+
 {% block body %}
-    {% for entity in equipes %}
-        {{ entity.nomEquipe }}
-        {{ entity.drapeau }}
-    {% endfor %}
+        <div class="drapeau">
+            <div class="row">
+                {% for entity in equipes %}
+
+                    <div class="col-sm-4 col-md-3 col-lg-3">
+                        <a href="">
+                            <div class="thumbnail carte">
+                                <img src="{{ entity.drapeau }}" alt="drapeau{{ entity.nomEquipe }}">
+                                <div class="caption">
+                                    <h3>{{ entity.nomEquipe }}</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                {% endfor %}
+            </div>
+        </div>
 
 {% endblock %}

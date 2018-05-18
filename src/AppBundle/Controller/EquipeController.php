@@ -77,16 +77,30 @@ class EquipeController extends Controller
     /**
      * Finds and displays a equipe entity.
      *
-     * @Route("/{id}", name="equipe_show")
+     * @Route("/admin/{id}", name="equipe_show_admin")
      * @Method("GET")
      */
-    public function showAction(Equipe $equipe)
+    public function showAdminAction(Equipe $equipe)
     {
         $deleteForm = $this->createDeleteForm($equipe);
 
         return $this->render('equipe/show.html.twig', array(
             'equipe' => $equipe,
             'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Finds and displays a equipe entity.
+     *
+     * @Route("/{id}", name="equipe_show")
+     * @Method("GET")
+     */
+    public function showAction(Equipe $equipe)
+    {
+
+        return $this->render('equipe/show.html.twig', array(
+            'equipe' => $equipe,
         ));
     }
 

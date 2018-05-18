@@ -14,10 +14,31 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component
  */
 class CombatController extends Controller
 {
+
     /**
      * Lists all combat entities.
      *
+     * @Route("/fight", name="combat_fight")
+     * @Method("GET")
+     */
+    public function fightAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $combats = $em->getRepository('AppBundle:Combat')->findAll();
+
+        return $this->render('combat/fight.html.twig', array(
+            'combats' => $combats,
+        ));
+    }
+
+
+    /**
+     * Lists all combat entities.
+     *
+
      * @Route("/", name="combat_tournoi")
+
      * @Method("GET")
      */
     public function tournoiAction()

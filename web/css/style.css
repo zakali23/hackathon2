@@ -11919,3 +11919,27 @@ button.close {
   font-family: 'Raleway', sans-serif;
 }
 
+.container-back{
+  background: #000;
+}
+.panel.panel-heading.text-center{
+  background-color: #929292;
+}
+.panel{
+  margin-top: 20px;
+  background: transparent;
+}
+body{
+  background-color: black;
+}
+.list-group-item.text-center{
+  background: transparent;
+}
+.list-group-item{
+  background: transparent;
+}
+.list-group {
+  color: white;
+  font-family: 'Cinzel Decorative', cursive;
+}
+

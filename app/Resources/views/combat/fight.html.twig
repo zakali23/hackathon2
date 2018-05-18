@@ -1,14 +1,49 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/css/combat.css') }}">
+
+    <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+{% endblock %}
 {% block body %}
 
-    {% for entity in combats %}
-        <ul>
-            <li>Equipe 1 : {{ entity.equipe1 }}</li>
-            <li>Equipe 2 : {{ entity.equipe2 }}</li>
-            <li>Date : {{ entity.date|date('Y-m-d H:i:s') }}</li>
-            <li>Vainqueur : {{ entity.resultat }}</li>
-        </ul>
 
+<div class ="container-back">
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <div class="glitch" data-text="FIGHTS">FIGHTS</div>
+
+
+</div>
+    {% for entity in combats %}
+
+    <div class="panel panel-default col-sm-6">
+        <div class='panel panel-heading text-center'>MATCH</div>
+        <div class='panel-body'>
+            <ul class="list-group">
+                <li class="list-group-item text-center">Finished</li>
+                <li class="list-group-item text-center">Date : {{ entity.date|date('Y-m-d H:i:s') }}</li>
+            </ul>
+            <div class='col-sm-6 text-center'> <ul class="list-group">
+                    <li class="list-group-item"><img class='team-icon' src='{{ entity.equipe1.drapeau }}' width='64' height='64'></li>
+                    <li class="list-group-item">{{ entity.equipe1 }}</li>
+
+                    <h1>VS</h1>
+
+                </ul></div><div class='col-sm-6 text-center'><ul class="list-group">
+                    <li class="list-group-item"><img class='team-icon' src='{{ entity.equipe2.drapeau }}' width='64' height='64'></li>
+                    <li class="list-group-item">{{ entity.equipe2 }}</li>
+                    <li class="list-group-item">Vainqueur : {{ entity.resultat }}</li>
+                </ul></div>
+        </div>
+    </div>
     {% endfor %}
 
+
+
+{% endblock %}
+{% block javascripts %}
+    <script>
+    <script src="{{ asset('../js/app.js') }}"></script>
 {% endblock %}

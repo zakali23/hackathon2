@@ -1,12 +1,16 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/css/combat.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/equipe.css') }}">
+
 {% endblock %}
 
 {% block body %}
         <div class="drapeau">
             <div class="row">
-                <h1>Equipe</h1><br>
+               <div class="glitch" data-texte="Teams">TEAMS</div>
                 {% for entity in equipes %}
 
                     <div class="col-sm-4 col-md-3 col-lg-3">
@@ -24,4 +28,8 @@
             </div>
         </div>
 
+{% endblock %}
+{% block javascripts %}
+
+        <script src="{{ asset('../js/app.js') }}"></script>
 {% endblock %}
